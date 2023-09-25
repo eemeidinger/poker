@@ -264,3 +264,6 @@ class Card:
     
     def __sub__(self, other):
         return self.__face - other.__face
+
+    def __eq__(self,other):
+        return (self.__face == other.__face) and (self.__suit == other.__suit)
