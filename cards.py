@@ -17,7 +17,15 @@ class Hand:
         self.count_faces_suits()
         self.__cards_sorted = sorted(self.__cards)
         return
-    
+                    
+    def __validate_hand(self,
+                        cards:list[Card]
+                       ):
+        for i in range(len(card)):
+            for j in range(i+1), len(cards)):
+                if cards[i] == cards[j]:
+                    raise ValueError('hand contains two of: ' + str(cards[i])
+        
     def get_best_hand(self) -> tuple[int]: # Rank of the hand (low wins)
                                      # Hand info
         RULES = {'straight_flush': self.get_straight_flush,
