@@ -21,8 +21,8 @@ class Hand:
     def __validate_hand(self,
                         cards:list[Card]
                        ):
-        for i in range(len(card)):
-            for j in range(i+1), len(cards)):
+        for i in range(len(cards)):
+            for j in range(i+1, len(cards)):
                 if cards[i] == cards[j]:
                     raise ValueError('hand contains two of: ' + str(cards[i])
         
